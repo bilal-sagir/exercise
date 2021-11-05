@@ -14,7 +14,7 @@ class ViewController: UIViewController
     {
         let touch = touches.first
         
-        if touch?.view == pinkView{pinkView.removeFromSuperview()}
+        if touch?.view == pinkView{pinkView.removeFromSuperview()} // comment added
     }
     
 
