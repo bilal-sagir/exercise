@@ -2,11 +2,21 @@ import UIKit
 
 class ViewController: UIViewController
 {
-
-    override func viewDidLoad()
+    @IBOutlet weak var pinkView: UIView!
+    
+    override func touchesBegan(_ touches: Set<UITouch>,
+                               with event: UIEvent?)
     {
-        super.viewDidLoad()
+        print("Touch Landed")
     }
+    override func touchesEnded(_ touches: Set<UITouch>,
+                               with event: UIEvent?)
+    {
+        let touch = touches.first
+        
+        if touch?.view == pinkView{pinkView.removeFromSuperview()}
+    }
+    
 
 
 }
