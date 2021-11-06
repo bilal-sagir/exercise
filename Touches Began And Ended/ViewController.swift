@@ -2,9 +2,13 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    override func viewDidLoad()
+
+    @IBAction func rotationGesture(_ sender: UIRotationGestureRecognizer)
     {
-        super.viewDidLoad()
+        let rotationRadians = sender.rotation
+        print("rotation radiance = \(rotationRadians)")
+        let rotationInDegree = rotationRadians * 180 / CGFloat.pi
+        print("rotation in degrees = \(rotationInDegree)")
     }
 }
 
